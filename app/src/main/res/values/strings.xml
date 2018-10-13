@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="current_player_title">Current Player:</string>
+    <string name="new_game_button_title">New Game</string>
+    <string name="draw_message">DRAW! Neither of two players won.</string>
+    <string name="congrats_message">Congrats to player %1$s, you\'ve won!</string>
+</resources>

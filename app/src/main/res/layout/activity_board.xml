@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGrey"
+    tools:context=".BoardActivity">
+
+    <LinearLayout
+        android:id="@+id/statusContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/titleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:text="@string/current_player_title" />
+
+        <TextView
+            android:id="@+id/turnTextView"
+            android:text="O"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorLightGrey"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusContainer">
+        <FrameLayout
+            android:background="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--Table Layout with 4 rows and each row with 4 buttons-->
+            <TableLayout
+                android:id="@+id/gameBoardTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="1dp"
+                android:columnCount="4"
+                android:gravity="center"
+                android:rowCount="4">
+
+                <!--Row 1-->
+                <TableRow
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25">
+
+                    <Button
+                        android:id="@+id/button00"
+                        style="@style/boardButtonStyle"
+                        android:tag="0" />
+
+                    <Button
+                        android:id="@+id/button01"
+                        style="@style/boardButtonStyle"
+                        android:tag="1" />
+
+                    <Button
+                        android:id="@+id/button02"
+                        style="@style/boardButtonStyle"
+                        android:tag="2" />
+
+                    <Button
+                        android:id="@+id/button03"
+                        style="@style/boardButtonStyle"
+                        android:tag="3" />
+
+                </TableRow>
+
+                <!--Row 2-->
+                <TableRow
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25">
+
+                    <Button
+                        android:id="@+id/button10"
+                        style="@style/boardButtonStyle"
+                        android:tag="4" />
+
+                    <Button
+                        android:id="@+id/button11"
+                        style="@style/boardButtonStyle"
+                        android:tag="5" />
+
+                    <Button
+                        android:id="@+id/button12"
+                        style="@style/boardButtonStyle"
+                        android:tag="6" />
+
+                    <Button
+                        android:id="@+id/button13"
+                        style="@style/boardButtonStyle"
+                        android:tag="7" />
+                </TableRow>
+
+                <!--Row 3-->
+                <TableRow
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25">
+
+                    <Button
+                        android:id="@+id/button20"
+                        style="@style/boardButtonStyle"
+                        android:tag="8" />
+
+                    <Button
+                        android:id="@+id/button21"
+                        style="@style/boardButtonStyle"
+                        android:tag="9" />
+
+                    <Button
+                        android:id="@+id/button22"
+                        style="@style/boardButtonStyle"
+                        android:tag="10" />
+
+                    <Button
+                        android:id="@+id/button23"
+                        style="@style/boardButtonStyle"
+                        android:tag="11" />
+
+                </TableRow>
+                <!--Row 4-->
+                <TableRow
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25">
+
+                    <Button
+                        android:id="@+id/button30"
+                        style="@style/boardButtonStyle"
+                        android:tag="12" />
+
+                    <Button
+                        android:id="@+id/button31"
+                        style="@style/boardButtonStyle"
+                        android:tag="13" />
+
+                    <Button
+                        android:id="@+id/button32"
+                        style="@style/boardButtonStyle"
+                        android:tag="14" />
+
+                    <Button
+                        android:id="@+id/button33"
+                        style="@style/boardButtonStyle"
+                        android:tag="15" />
+
+                </TableRow>
+            </TableLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/newGameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/colorButton"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:text="@string/new_game_button_title"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
