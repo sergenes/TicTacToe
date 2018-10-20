@@ -27,4 +27,16 @@
 <!--inject button click handler in all buttons-->
         <item name="android:onClick">buttonClickHandler</item>
     </style>
+
+    <style name="boardButtonConstrainLayoutStyle" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">42sp</item>
+        <item name="android:textColor">@color/colorGameSign</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">2dp</item>
+        <!--inject button click handler in all buttons-->
+        <item name="android:onClick">buttonClickHandler</item>
+    </style>
 </resources>
