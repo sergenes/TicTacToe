@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
-import kotlinx.android.synthetic.main.activity_board.*
+import kotlinx.android.synthetic.main.new_activity_board.*
 import org.nes.tictactoe.logic.GameController
 import org.nes.tictactoe.logic.Status
 import org.nes.tictactoe.logic.Turn
@@ -19,11 +19,11 @@ import org.nes.tictactoe.logic.Turn
 class BoardActivity : AppCompatActivity() {
     private val TAG = this@BoardActivity.javaClass.simpleName
 
-    private val gameController = GameController()
+    val gameController = GameController()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_board)
+        setContentView(R.layout.new_activity_board)
 
         turnTextView.text = "O"
 
